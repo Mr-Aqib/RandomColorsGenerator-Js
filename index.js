@@ -11,6 +11,7 @@
 
 let colors = ['A', 'B', 'C', 'D', 'E', 'F', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 let colorsName = document.querySelector('.cName')
+let Colorbutton=document.querySelector('#colorbtn')
 //Generatingng Random number
 const randnumgen = () => {
     let randnum = Math.random() * colors.length
@@ -29,10 +30,11 @@ const colorsgen = () => {
 }
 
 //Main
-window.addEventListener(('mousemove'), () => {
+Colorbutton.addEventListener('click', () => {
     // randnumgen()
     document.body.style.background = colorsgen()
     colorsName.innerHTML = colorsgen() //For Displaying on Screen
+    
 
 
 })
