@@ -10,30 +10,29 @@
 //By Using Functions and Loops
 
 let colors = ['A', 'B', 'C', 'D', 'E', 'F', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-let colorsName=document.querySelector('.cName')
-const randnumgen=()=>
-{
-    let randnum=Math.random()*colors.length
-    let floor=Math.floor(randnum)
+let colorsName = document.querySelector('.cName')
+//Generatingng Random number
+const randnumgen = () => {
+    let randnum = Math.random() * colors.length
+    let floor = Math.floor(randnum)
     return floor
-    
+
 }
-const colorsgen=()=>
-{
-    let hexvalue='#'
-    for(let i=0;i<6;i++)
-    {
-       hexvalue=hexvalue + colors[randnumgen()]
+//Generating hexValue 
+const colorsgen = () => {
+    let hexvalue = '#'
+    for (let i = 0; i < 6; i++) {
+        hexvalue = hexvalue + colors[randnumgen()]
     }
-    console.log(hexvalue)// for checking its Working or Not
+    // console.log(hexvalue)// for checking its Working or Not
     return hexvalue
 }
 
-
-window.addEventListener(('click'),()=>
-{
+//Main
+window.addEventListener(('mousemove'), () => {
     // randnumgen()
-document.body.style.background=colorsgen()
-colorsName.innerHTML=colorsgen()
+    document.body.style.background = colorsgen()
+    colorsName.innerHTML = colorsgen() //For Displaying on Screen
+
 
 })
